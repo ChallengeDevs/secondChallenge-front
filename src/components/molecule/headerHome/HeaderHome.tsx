@@ -13,7 +13,7 @@ export const HeaderHome = () => {
 
   return (
     <>
-      <header className="flex justify-between p-6 items-center w-full relative">
+      <header className="flex justify-between p-6 items-center w-full relative bg-primary">
         <Image
           src="/imgs/menu.png"
           width={32}
