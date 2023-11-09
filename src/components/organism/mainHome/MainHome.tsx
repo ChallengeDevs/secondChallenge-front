@@ -29,8 +29,8 @@ export const MainHome = () => {
       setTimeout(() => {
         setScoreboard(data);
         setTeams(dataTeams.sports[0].leagues[0].team);
-      }, 2000)
-      setTimeout(fetchData, 10 * 1000)
+      }, 2000);
+      setTimeout(fetchData, 10 * 1000);
     };
 
     fetchData();
@@ -38,8 +38,8 @@ export const MainHome = () => {
 
   return (
     <>
-      {
-        (scoreboard) ? <main className="flex flex-wrap items-center justify-center py-6 px-20 gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
+      {scoreboard ? (
+        <main className="flex h-[86.5vh] flex-wrap items-start justify-center px-20 gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
           {scoreboard?.events
             .slice(firstEventIndex, lastEventIndex)
             .map((event, key: number) => (
@@ -87,7 +87,9 @@ export const MainHome = () => {
               />
             )}
           </div>
-        </main> : (<div className="w-full flex items-center justify-center py-20">
+        </main>
+      ) : (
+        <div className="w-full flex items-center justify-center py-20">
           <Triangle
             height="104"
             width="104"
@@ -95,8 +97,8 @@ export const MainHome = () => {
             ariaLabel="triangle-loading"
             visible={true}
           />
-        </div>)
-      }
+        </div>
+      )}
     </>
   );
 };
