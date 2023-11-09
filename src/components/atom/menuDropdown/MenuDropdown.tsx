@@ -8,7 +8,7 @@ export const MenuDropdown = () => {
         <ul>
           <li>
             <Link
-              href="/teams"
+              href="/team"
               className="text-primary font-bold cursor-pointer hover:opacity-70 duration-300"
             >
               Teams
