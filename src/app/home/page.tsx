@@ -1,6 +1,5 @@
 import { HeaderHome } from "@/components/molecule/headerHome/HeaderHome";
-import { MainHome } from "@/components/molecule/mainHome/MainHome";
-import React from "react";
+import { MainHome } from "@/components/organism/mainHome/MainHome";
 
 export default function page() {
   return (

@@ -9,8 +9,8 @@ export default function Home() {
         <h1 className="text-7xl text-black font-bold">ScoreSlam</h1>
       </div>
       <div className='flex flex-col items-center gap-4 pt-4 from-'>
-        <Link href={'/login'}><button className="w-[360px] h-14 bg-black rounded-lg hover:bg-slate-950 duration-300">login</button></Link>
-        <Link href={'/register'}><button className="w-[360px] h-14 bg-black rounded-lg hover:bg-slate-950 duration-300">register</button></Link>
+        <Link href={'/login'}><button className="w-[360px] h-14 bg-black rounded-lg text-primary hover:bg-slate-950 duration-300">login</button></Link>
+        <Link href={'/register'}><button className="w-[360px] h-14 bg-black rounded-lg text-primary hover:bg-slate-950 duration-300">register</button></Link>
       </div>
     </main>
   )

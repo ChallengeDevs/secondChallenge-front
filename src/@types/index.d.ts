@@ -1,5 +1,3 @@
-import { StaticGenerationAsyncStorage } from "next/dist/client/components/static-generation-async-storage.external";
-
 export namespace Models {
   export interface Events {
     events: Game[];
@@ -10,7 +8,7 @@ export namespace Models {
     name: string;
     competitions: Competition[];
     status: Status;
-    link: Link[];
+    links: Link[];
   }
 
   export interface Competition {
@@ -156,5 +154,14 @@ export namespace Models {
 
   export interface ScoreTable {
     teams: Competitors[];
+  }
+
+  export interface GithubInfo {
+    name: string;
+    login: string;
+    location: string;
+    avatar_url: string;
+    bio: string;
+    html_url: string;
   }
 }
