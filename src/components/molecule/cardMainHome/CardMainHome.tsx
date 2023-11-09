@@ -7,7 +7,7 @@ export const CardMainHome: React.FC<Models.Event> = ({ event, teams }) => {
   const selectedTeams = event.competitions[0].competitors;
 
   return (
-    <section className="w-[30rem] flex flex-col justify-center gap-4 items-center h-80 rounded-xl bg-black border-black border-2 p-2">
+    <section className="w-[30rem] flex flex-col justify-center gap-3 items-center h-72 rounded-xl bg-black border-black border-2 p-2">
       <div className="flex items-center justify-center w-full">
         <div className="flex flex-col items-center justify-center w-2/6">
           <img
@@ -33,7 +33,7 @@ export const CardMainHome: React.FC<Models.Event> = ({ event, teams }) => {
           {event.status.type.name !== "STATUS_SCHEDULED" && (
             <span className="text-primary font-bold text-xl">
               {event.status.type.name === "STATUS_IN_PROGRESS" ||
-                event.status.type.name === "STATUS_HALFTIME" ? (
+              event.status.type.name === "STATUS_HALFTIME" ? (
                 <img
                   src="/imgs/live.png"
                   alt="Live"
@@ -81,24 +81,25 @@ export const CardMainHome: React.FC<Models.Event> = ({ event, teams }) => {
           teamLogo={
             event.competitions[0].situation.lastPlay?.team
               ? teams?.find(
-                (team) =>
-                  team.team.id ===
-                  event.competitions[0].situation.lastPlay.team.id
-              )?.team.logos[0].href
+                  (team) =>
+                    team.team.id ===
+                    event.competitions[0].situation.lastPlay.team.id
+                )?.team.logos[0].href
               : null
           }
         />
       )}
       {selectedTeams[0].linescores && <ScoreTable teams={selectedTeams} />}
 
-      {
-        event.status.type.name === 'STATUS_FINAL' && 
-        <Link className="bg-primary px-4 py-2 rounded-lg border-2 border-primary hover:border-primary hover:border-2 hover:bg-transparent hover:text-primary duration-300" 
-        href={event.links[2].href} 
-        target="_blank">
+      {event.status.type.name === "STATUS_FINAL" && (
+        <Link
+          className="bg-primary px-4 py-2 rounded-lg border-2 border-primary hover:border-primary hover:border-2 hover:bg-transparent hover:text-primary duration-300"
+          href={event.links[2].href}
+          target="_blank"
+        >
           Highlights at ESPN
         </Link>
-      }
+      )}
     </section>
   );
 };
