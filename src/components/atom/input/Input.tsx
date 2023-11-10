@@ -3,6 +3,8 @@ type InputPropsSchema = {
   type: string;
   name: string;
   placeholder: string;
+  value: string
+  onChange: (e: any) => void
 };
 
 export const Input = ({
@@ -10,6 +12,8 @@ export const Input = ({
   type,
   name,
   placeholder,
+  onChange,
+  value,
   ...rest
 }: InputPropsSchema) => {
   return (
@@ -26,6 +30,8 @@ export const Input = ({
         type={type}
         autoComplete="off"
         placeholder={placeholder}
+        onChange={onChange}
+        value={value}
         {...rest}
       />
     </div>

@@ -164,4 +164,16 @@ export namespace Models {
     bio: string;
     html_url: string;
   }
+
+  export interface CreateUser {
+    name: string
+    email: string
+    username: string
+    password: string
+  }
+
+  export interface LoginUser {
+    email: string
+    password: string
+  }
 }
