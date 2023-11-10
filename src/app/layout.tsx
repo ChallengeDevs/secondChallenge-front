@@ -1,7 +1,8 @@
+import "atropos/css";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
-import "atropos/css";
 
 const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
