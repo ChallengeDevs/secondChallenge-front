@@ -1,5 +1,11 @@
-import React from "react";
+import { HeaderHome } from "@/components/molecule/headerHome/HeaderHome";
+import { MainHome } from "@/components/organism/mainHome/MainHome";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <>
+      <HeaderHome />
+      <MainHome />
+    </>
+  );
 }
