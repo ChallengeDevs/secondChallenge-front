@@ -6,7 +6,7 @@ type HeaderPropsSchema = {
 
 export const Header = ({ title }: HeaderPropsSchema) => {
   return (
-    <header className="flex gap-5 p-6 bg-primary d-0:items-center d-0:justify-center">
+    <header className="flex gap-5 p-6 bg-primary d-0:items-center d-0:justify-center w-full">
       <Image
         width={80}
         height={80}

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const MenuDropdown = () => {
   return (
     <>
-      <section className="flex flex-col w-24 items-center justify-center w-40 gap-4 bg-black rounded-lg border-black border-2 absolute top-16 left-12 p-3">
+      <section className="flex flex-col w-24 items-center justify-center gap-4 bg-black rounded-lg border-black border-2 absolute top-16 left-12 p-3">
         <ul>
           <li>
             <Link
