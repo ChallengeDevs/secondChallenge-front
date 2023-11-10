@@ -34,9 +34,9 @@ export default function TeamPage() {
     <div>
       <Header title="Team" />
       {gitEric && gitLucas ? (
-        <main className="flex flex-col items-center justify-center py-20 gap-8">
-          <Atropos className="my-atropos w-1/2">
-            <div className="bg-black w-full rounded-xl p-8 flex gap-6 items-center">
+        <main className="flex flex-col items-center justify-center py-20 gap-8 bg-gradient-to-t from-gradient2 to-gradient1">
+          <Atropos className="w-1/2 d-0.01:w-3/4 d-0.2:w-[95%] rounded-xl my-atropos">
+            <div className="bg-black w-full rounded-xl p-8 d-0.2:p-4 d-0.2:flex-col flex gap-6 items-center">
               <div className="flex flex-col gap-2 items-center">
                 <img
                   src={gitEric?.avatar_url}
@@ -51,9 +51,9 @@ export default function TeamPage() {
                 <p className="text-primary text-lg font-bold">
                   {gitEric?.name}
                 </p>
-                <p className="text-primary">{gitEric?.bio}</p>
+                <p className="text-primary d-0.2:text-sm">{gitEric?.bio}</p>
                 <div className="flex gap-4 w-full items-center justify-start">
-                  <span className="text-black text-center text-sm bg-gray w-28 py-1 px-2 rounded-xl">
+                  <span className="text-black text-center text-sm bg-gray w-28 py-1 px-2 rounded-xl d-0.2:text-xs">
                     {gitEric?.location}
                   </span>
                   <Link
@@ -87,8 +87,8 @@ export default function TeamPage() {
             </div>
           </Atropos>
 
-          <Atropos className="my-atropos w-1/2">
-            <div className="bg-black w-full rounded-xl p-8 flex gap-6 items-center">
+          <Atropos className="my-atropos w-1/2 d-0.01:w-3/4 d-0.2:w-[95%]">
+            <div className="bg-black w-full rounded-xl p-8 d-0.2:p-4 flex gap-6 d-0.2:flex-col items-center">
               <div className="flex flex-col gap-2 items-center">
                 <img
                   src={gitLucas?.avatar_url}
@@ -100,13 +100,13 @@ export default function TeamPage() {
                 />
                 <p className="text-primary">@{gitLucas?.login}</p>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 w-full">
                 <p className="text-primary text-lg font-bold">
                   {gitLucas?.name}
                 </p>
-                <p className="text-primary">{gitLucas?.bio}</p>
+                <p className="text-primary d-0.2:text-sm">{gitLucas?.bio}</p>
                 <div className="flex gap-4 w-full items-center justify-start">
-                  <span className="text-black text-center text-sm bg-gray w-32 py-1 px-2 rounded-xl">
+                  <span className="text-black text-center text-sm bg-gray w-32 py-1 px-2 rounded-xl d-0.2:text-xs">
                     {gitLucas?.location}
                   </span>
                   <Link
