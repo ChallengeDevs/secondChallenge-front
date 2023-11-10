@@ -8,9 +8,13 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      "hh-0": { raw: "(min-height: 768px)" },
+      "hh-1": { raw: "(min-height: 904px)" },
+      "hh-2": { raw: "(min-height: 1000px)" },
       "d-0": { max: "768px" },
       "d-1": { max: "345px" },
-      "l-3": { min: "2550px" },
+      "u-0": { min: "1575px" },
+      "u-1": { min: "2400px" },
       mdOne: { max: "1335px" },
     },
     extend: {
