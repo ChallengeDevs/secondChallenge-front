@@ -7,54 +7,57 @@ import { Input } from "@/components/atom/input/Input";
 import { Header } from "@/components/molecule/header/Header";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from 'react';
+import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 export default function RegisterPage() {
-  const router = useRouter()
+  const router = useRouter();
   const [formValues, setFormValues] = useState<Models.CreateUser>({
     name: "",
     email: "",
     password: "",
-    username: ""
-  })
+    username: "",
+  });
 
   const notifySuccess = (msg: string) => toast.success(msg);
   const notifyFailure = (msg: string) => toast.error(msg);
 
   const handleInputChange = (e: any) => {
-    const { name, value } = e.target
-    setFormValues({ ...formValues, [name]: value })
-  }
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault()
-    const response = await handleRegisterUser(formValues)
+    e.preventDefault();
+    const response = await handleRegisterUser(formValues);
 
     if (response.status === 201) {
       setFormValues({
         name: "",
         email: "",
         password: "",
-        username: ""
-      })
+        username: "",
+      });
 
-      notifySuccess(response.data.statusMessage)
+      notifySuccess(response.data.statusMessage);
 
       setTimeout(() => {
-        router.push('/login')
-      }, 2000)
+        router.push("/login");
+      }, 2000);
     } else {
-      notifyFailure(response.data.error)
+      notifyFailure(response.data.error);
     }
-  }
+  };
 
   return (
     <>
       <ToastContainer autoClose={1500} />
       <main className="min-h-screen">
         <Header title="register" />
-        <form onSubmit={(e) => handleSubmit(e)} className="bg-primary flex flex-col items-center justify-center h-[90vh] gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
+        <form
+          onSubmit={(e) => handleSubmit(e)}
+          className="bg-primary flex flex-col items-center justify-center h-screen gap-4 u-1:gap-6 bg-gradient-to-t from-gradient2 to-gradient1"
+        >
           <Input
             type="text"
             name="name"
@@ -90,7 +93,7 @@ export default function RegisterPage() {
           <Button title="register" type="submit" />
           <Link
             href="/login"
-            className="w-80 text-black text-lg font-bold text-right hover:text-slate-950 duration-300"
+            className="w-80 d-1:w-64 u-0:w-96 u-0:text-xl u-1:w-[30rem] u-1:text-3xl text-black text-lg font-bold text-right hover:text-slate-950 duration-300"
           >
             login
           </Link>
