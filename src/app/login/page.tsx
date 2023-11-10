@@ -9,12 +9,12 @@ export default function LoginPage() {
   return (
     <main className="w-full">
       <Header title="login" />
-      <form className="bg-primary flex flex-col items-center h-[83.4vh] justify-center gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
+      <form className="bg-primary flex flex-col items-center h-screen justify-center gap-4 u-1:gap-6 bg-gradient-to-t from-gradient2 to-gradient1">
         <Input
-          name="username"
-          placeholder="johndoe"
-          title="username"
-          type="text"
+          name="email"
+          placeholder="johndoe@gmail.com"
+          title="email"
+          type="email"
         />
         <Input
           name="password"
@@ -25,7 +25,7 @@ export default function LoginPage() {
         <Button title="login" type="submit" link="/" />
         <Link
           href="/register"
-          className="w-80 d-1:w-64 text-black text-lg font-bold text-right hover:text-slate-950 duration-300"
+          className="w-80 d-1:w-64 u-0:w-96 u-0:text-xl u-1:w-[30rem] u-1:text-3xl text-black text-lg font-bold text-right hover:text-slate-950 duration-300"
         >
           register
         </Link>
