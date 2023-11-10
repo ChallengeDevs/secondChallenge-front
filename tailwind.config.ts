@@ -11,11 +11,14 @@ const config: Config = {
       "hh-0": { raw: "(min-height: 768px)" },
       "hh-1": { raw: "(min-height: 904px)" },
       "hh-2": { raw: "(min-height: 1000px)" },
+      "d-0.01": { max: "1090px" },
       "d-0": { max: "768px" },
+      "d-0.1": { max: "710px" },
+      "d-0.2": { max: "600px" },
+      "d-0.3": { max: "440px" },
       "d-1": { max: "345px" },
       "u-0": { min: "1575px" },
       "u-1": { min: "2400px" },
-      mdOne: { max: "1335px" },
     },
     extend: {
       colors: {
