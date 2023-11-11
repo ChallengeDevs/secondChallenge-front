@@ -39,7 +39,7 @@ export const MainHome = () => {
   return (
     <>
       {scoreboard ? (
-        <main className="flex flex-wrap items-center max-h-full justify-center py-[7.2rem] px-20 d-0.3:px-4 gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
+        <main className="flex flex-wrap items-center h-screen justify-center py-[7.2rem] px-20 d-0.3:px-4 gap-4 bg-gradient-to-t from-gradient2 to-gradient1">
           {scoreboard?.events
             .slice(firstEventIndex, lastEventIndex)
             .map((event, key: number) => (
